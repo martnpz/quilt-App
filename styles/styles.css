@@ -1,0 +1,146 @@
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 20px 20px;
+}
+
+button {
+  background: none;
+  border: none;
+  outline: none;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 32px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.men-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 80px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.menu {
+  height: 27px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.menu1 {
+  height: 2px;
+  width: 24px;
+  background: black;
+}
+
+.menu2 {
+  height: 2px;
+  width: 15px;
+  background: black;
+}
+
+.menu3 {
+  height: 2px;
+  width: 8;
+  background: black;
+}
+
+.night-mode {
+  display: block;
+}
+
+.day-mode {
+  display: none;
+}
+
+.search-container {
+  margin: 32px 0 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  border-radius: 100px;
+  border-border: none;
+}
+
+.search-container input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  outline: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 220px;
+  height: 32px;
+  padding: 0 0 0 40%;
+  background: #EEEEEE;
+  border: none;
+  color: black;
+  font-weight: 800;
+  border-radius: 100px;
+}
+
+.search-container input::-webkit-input-placeholder {
+  color: #D7D7D7;
+}
+
+.search-container input:-ms-input-placeholder {
+  color: #D7D7D7;
+}
+
+.search-container input::-ms-input-placeholder {
+  color: #D7D7D7;
+}
+
+.search-container input::placeholder {
+  color: #D7D7D7;
+}
+
+main {
+  margin-top: 42px;
+}
+
+.cards {
+  -webkit-clip-path: polygon(10% 1%, 90% 0, 100% 20%, 100% 80%, 90% 100%, 10% 98%, 0 80%, 0 20%);
+          clip-path: polygon(10% 1%, 90% 0, 100% 20%, 100% 80%, 90% 100%, 10% 98%, 0 80%, 0 20%);
+  background: #EEEEEE;
+  width: 100%;
+  height: 200px;
+}
+/*# sourceMappingURL=styles.css.map */
