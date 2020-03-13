@@ -7,10 +7,6 @@
           box-sizing: border-box;
 }
 
-body {
-  margin: 20px 20px;
-}
-
 button {
   background: none;
   border: none;
@@ -21,6 +17,7 @@ button {
 }
 
 header {
+  margin: 20px 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -86,7 +83,7 @@ header {
 }
 
 .search-container {
-  margin: 32px 0 0 0;
+  margin: 32px 0 40px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -108,7 +105,7 @@ header {
           justify-content: center;
   width: 220px;
   height: 32px;
-  padding: 0 0 0 40%;
+  padding: 10px 20%;
   background: #EEEEEE;
   border: none;
   color: black;
@@ -136,11 +133,159 @@ main {
   margin-top: 42px;
 }
 
+h1 {
+  font-size: 1em;
+  margin-bottom: 15px;
+}
+
 .cards {
-  -webkit-clip-path: polygon(10% 1%, 90% 0, 100% 20%, 100% 80%, 90% 100%, 10% 98%, 0 80%, 0 20%);
-          clip-path: polygon(10% 1%, 90% 0, 100% 20%, 100% 80%, 90% 100%, 10% 98%, 0 80%, 0 20%);
-  background: #EEEEEE;
+  -webkit-transition: 10s ease-in-out;
+  transition: 10s ease-in-out;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 12px 20px;
+  -webkit-box-shadow: 0px -8px 20px #FFFFFF;
+          box-shadow: 0px -8px 20px #FFFFFF;
+  margin-top: -30px;
+  background-repeat: no-repeat;
+  background-size: cover;
   width: 100%;
   height: 200px;
+  background-image: url(/img/card.svg);
+}
+
+.cards p {
+  font-size: .8em;
+  font-weight: 700;
+  color: #949494;
+}
+
+.description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.description img {
+  margin-right: 20px;
+}
+
+.tools {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.tools .tool {
+  width: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.tools .tool button {
+  height: 23px;
+  width: 23px;
+  background-image: url(/img/expand.svg);
+}
+
+.card-content {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.card-content .details-company {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.card-content .details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.card-content .details p {
+  width: 70%;
+}
+
+.card-content .notice {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.card-content .notice p {
+  font-weight: 700;
+  background-image: url(/img/exagon1.svg);
+  width: 87px;
+  height: 30px;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.card-content .options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.card-content #expandButtonClose {
+  width: 100px;
+  height: 100px;
+  background: red;
 }
 /*# sourceMappingURL=styles.css.map */

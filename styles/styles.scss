@@ -163,5 +163,40 @@ h1 {
 
 .card-content{
     display: none;
-    
+    flex-direction: column;
+    .details-company {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-evenly;
+    }
+    .details {
+        display: flex;
+        justify-content: space-between;
+        p {
+            width: 70%;
+        }
+    }
+    .notice {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        p {
+            font-weight: 700;
+            background-image: url(/img/exagon1.svg);
+            width: 87px;
+            height: 30px;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+        }
+    }
+    .options {
+        display: flex;
+        flex-direction: column;
+    }
+    #expandButtonClose{
+        width: 100px;
+        height: 100px;
+        background:red;
+    }
 }

@@ -1,0 +1,14 @@
+:root {
+  --primary-color: #28A47E;
+  --secundary-color: #BDFFEB;
+  --alert-color: #E33B3B;
+  --night-color: #077151;
+  --grey: #3D3C3C;
+  --white-text: #EEEEEE;
+  --titles-color: #D7D7D7;
+}
+
+body {
+  background: var(--primary-color);
+}
+/*# sourceMappingURL=variables.css.map */
