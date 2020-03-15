@@ -1,5 +1,5 @@
 $primary-color: #28A47E;
-$secundary-color: #BDFFEB;
+$secundary-color: #80C6B1;
 $alert-color: #E33B3B;
 $night-color: #077151;
 $grey: #3D3C3C;
@@ -7,12 +7,21 @@ $sub-title: #949494;
 $white-text: #EEEEEE;
 $titles-color: #D7D7D7;
 
+@mixin span {
+     color: $sub-title;
+    font: {
+         weight: 700;
+        size: .8em;
+    }
+}
+
 * {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     text-decoration: none;
     box-sizing: border-box;
+    transition: 1s ease;
 }
 
 button {
@@ -124,13 +133,9 @@ h1 {
     }
     width: 100%;
     height: 200px;
-    background-image: url(/img/card.svg);
+    background-image: url(../img/card.svg);
     & p {
-        font: { 
-        size: .8em;
-        weight: 700;
-        }
-        color: $sub-title;
+        @include span();
     }
 }
 
@@ -156,7 +161,7 @@ h1 {
         button {
             height: 23px;
             width: 23px;
-            background-image: url(/img/expand.svg);
+            background-image: url(../img/expand.svg);
         }
     }
 }
@@ -164,6 +169,7 @@ h1 {
 .card-content{
     display: none;
     flex-direction: column;
+    margin: 0 20px 0 20px;
     .details-company {
         display: flex;
         align-items: flex-start;
@@ -190,13 +196,129 @@ h1 {
             justify-content: center;
         }
     }
+
+    
+.place:hover ~ .box-show {
+    transform: translateX(300px) !important;
+    width: 1px !important;
+    transition: 1s ease;
+}
+
     .options {
+        span{
+            color: $grey;
+            font: {
+                weight: 800;
+                size: .8em;
+            }
+        }
         display: flex;
         flex-direction: column;
-    }
-    #expandButtonClose{
-        width: 100px;
-        height: 100px;
-        background:red;
+        .place-options {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            .places {
+                width: 100%;
+                display: flex;
+            }
+            .box-show {
+                position: absolute;
+                height: 45px;
+                background: white;
+                width: 80%;
+                z-index: 4;
+                transform: translateX(50px);
+            }
+            span {
+                z-index: 6;
+                @include span();
+            }
+            .place {
+                height: 40px;
+                font: {
+                    size: 1em;
+                    weight: 700;
+                }
+                width: 100%;
+                background: none;
+                border: none;
+                border-bottom: 3px solid $secundary-color;
+                color: $secundary-color;
+            }
+        }
     }
 }
+    .time {
+        display: flex;
+        justify-content: space-between;
+        span {
+            @include span();
+        }
+        .time-option input{
+            color: $secundary-color;
+            font: {
+                weight: 700;
+                size: 1.2em;
+            }
+            border: none;
+            &::-webkit-inner-spin-button {
+                display: none;
+              }
+              &::-webkit-clear-button {
+                display: none;
+              }
+        }
+        span {
+            @include span();
+        }
+    }
+
+.price {
+    height: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    right: 0;
+    bottom: 20%;
+    p {
+        font-size: 1.8em;
+        font-weight: 600;
+        color: black;
+        padding-bottom: 40px;
+        border: {
+            bottom: 3px solid $primary-color;
+        }
+    }
+}
+.save {
+    font-size: 1.5em;
+    color: $white-text;
+    font-weight: 800;
+    position: absolute;
+    width: 100%;
+    height: 15vh;
+    left: 0;
+    bottom: 0;
+    border: none;
+    margin: 0;
+    background: {
+        image: url(../img/save.svg);
+        color: transparent;
+        size: 100vw;
+        repeat: no-repeat
+    }
+    &:focus {
+        outline: none;
+    }
+}
+
+
+
+
+    // #expandButtonClose {
+    //     width: 100px;
+    //     height: 100px;
+    //     background:red;
+    // }

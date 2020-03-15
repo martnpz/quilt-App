@@ -54,7 +54,7 @@
         <aside class="card-content">
             <div class="details-company">
                 <img src="img/ent1.png" alt="">
-                <div class="time">
+                <div class="">
                     <h2>Comapany name</h2>
                     <p>7:00 - 12:00</p>
                 </div>
@@ -71,30 +71,34 @@
                 <div class="places">
                     <span>places</span>
                     <div class="place-options">
-                        <buttom class="place1">1</buttom>
-                        <buttom class="place2">2</buttom>
-                        <buttom class="place3">3</buttom>
-                        <buttom class="place4">4</buttom>
-                        <buttom class="place5">5</buttom>
+                        <div class="places">
+                        <input type="button" value="1" class="place" id="bPce1">
+                        <input type="button" value="2" class="place" id="bPce2">
+                        <input type="button" value="3" class="place" id="bPce3">
+                        <input type="button" value="4" class="place" id="bPce4">
+                        <input type="button" value="5" class="place" id="bPce5">
+                        <div class="box-show"></div>
+                        </div>
+                        <span>Avaible:</span>
                     </div>
-                    <span>Avaible:</span>
                 </div>
+                <span>Time</span>
                 <div class="time">
-                    <span>Time</span>
                     <div class="time-option">
                         <form action="">
                             <div class="open-time"></div>
-                            <input type="time" id="time-option" name="time-option">
+                            <input type="time" id="time-option"
+                             name="time-option" value="00:00">
                         </form>
                     </div>
                     <span>Until:</span>
                 </div>
             </div>
             <div class="price">
-                <p id="price"></p>
+                <p id="price">$$$</p>
             </div>
-            <input type="button" value="" class="save" placeholder="Save">
-            <button id="expandButtonClose" class="expand"></button>
+            <button class="save">Save</button>
+            <button id="expandButtonClose">
         </aside>
         <section class="cards" id="cardd">
             <h1 id="title2">Title for row</h1>
@@ -111,9 +115,7 @@
             </div>
         </section>
         <aside class="card-content"> <!--show after expand click-->
-            <button id="expandButtonClose" class="expand">
-
-            </button>
+        
         </aside>
         <section class="cards" id="cardd">
             <h1 id="title3">Title for row</h1>
