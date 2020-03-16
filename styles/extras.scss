@@ -1,0 +1,6 @@
+   
+.place:hover ~ .box-show {
+    transform: translateX(700px) !important;
+    width: 0px !important;
+    transition: 1s ease-in;
+}

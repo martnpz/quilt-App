@@ -1,1 +1,8 @@
-/* No CSS *//*# sourceMappingURL=extras.css.map */
+.place:hover ~ .box-show {
+  -webkit-transform: translateX(700px) !important;
+          transform: translateX(700px) !important;
+  width: 0px !important;
+  -webkit-transition: 1s ease-in;
+  transition: 1s ease-in;
+}
+/*# sourceMappingURL=extras.css.map */
