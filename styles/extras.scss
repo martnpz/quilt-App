@@ -1,4 +1,18 @@
-   
+.menu:focus > svg:nth-child(1) {
+    transform: translate(200px) rotate(90deg);
+    transition: 1.6s;
+}
+
+.menu:focus > svg:nth-child(2) {
+    transform: translateX(-100px);
+    transition: 1.4s;
+}
+
+.menu:focus > svg:nth-child(3) {
+    transform: translateX(-100px);
+    transition: .8s;
+}
+
 .place:hover ~ .box-show {
     transform: translateX(700px) !important;
     width: 0px !important;

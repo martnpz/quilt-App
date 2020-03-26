@@ -1,11 +1,34 @@
-$primary-color: #28A47E;
-$secundary-color: #80C6B1;
-$alert-color: #E33B3B;
-$night-color: #077151;
-$grey: #3D3C3C;
-$sub-title: #949494;
-$white-text: #EEEEEE;
-$titles-color: #D7D7D7;
+:root {
+    --primary-color: #28A47E;
+    --secundary-color: #80C6B1;
+    --alert-color: #E33B3B;
+    --night-color: #077151;
+    --sub-title: #949494;
+}
+
+.dark{
+    --primary-color: #077151;
+    --grey: #F5F5F5;
+    --white-text: #3d3C3d;
+    --titles-color: #000;
+    --menu: #fff; 
+    --shadown: #fff; 
+    --invert-color: invert(0);
+  }
+  
+.light{
+    --primary-color: #28A47E;
+    --grey: #3D3C3C;
+    --white-text: #EEEEEE;
+    --titles-color: #fff;
+    --menu: #000; 
+    --shadown: #000;
+    --invert-color: invert(1);
+  }
+
+.dark-btn {
+    display: none;
+}
 
 @mixin flex-column {
     display: flex;
@@ -14,11 +37,15 @@ $titles-color: #D7D7D7;
 }
 
 @mixin span {
-     color: $sub-title;
+     color: var(--sub-title);
     font: {
-         weight: 700;
+        weight: 700;
         size: .8em;
     }
+}
+
+body {
+    background: var(--menu);
 }
 
 * {
@@ -57,32 +84,25 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    filter: (var(--invert-color));
 }
 
 .menu1 {
     height: 2px;
     width: 24px;
-    background: black;
+    background: var(--menu);
 }
 
 .menu2 {
     height: 2px;
     width: 15px;
-    background: black;
+    background: var(--menu);
 }
 
 .menu3 {
     height: 2px;
     width: 8;
-    background: black;
-}
-
-.night-mode {
-    display: block; 
-}
-
-.day-mode {
-    display: none;
+    background: var(--menu);
 }
 
 .search-container {
@@ -96,7 +116,7 @@ header {
     }
     input {
         &::placeholder {
-            color: $titles-color;
+            color: var(--sub-title);
         }
         display: flex;
         outline: none;
@@ -104,9 +124,9 @@ header {
         width: 220px;
         height: 32px;
         padding: 10px 20%;
-        background: $white-text;
+        background: var(--grey);
         border: none;
-        color: black;
+        color: var(--titles-color);
         font: {
             weight: 800;
         }
@@ -123,15 +143,16 @@ main {
 h1 {
     font-size: 1em;
     margin-bottom: 15px;
+    color: var(--titles-color);
 }
 
 .cards{
-    transition: 10s ease-in-out;
+    transition: .1s ease-in-out;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 12px 20px;
-    box-shadow: 0px -8px 20px #FFFFFF;
+    box-shadow: 0px -8px 20px var(--shadown);
     margin-top: -30px;
     background: {
         repeat: no-repeat;
@@ -139,10 +160,19 @@ h1 {
     }
     width: 100%;
     height: 200px;
-    background-image: url(../img/card.svg);
+    background: var(--grey);
+    clip-path: polygon(90% 0, 100% 20%, 100% 100%, 0 100%, 0 20%, 10% 0);
     & p {
         @include span();
     }
+}
+
+.card-shadown {
+    position: absolute;
+    width: 100%;
+    height: 200px;
+    background: var(--shadown);
+    clip-path: polygon(90% 0, 100% 20%, 100% 100%, 0 100%, 0 20%, 10% 0);
 }
 
 .description {
@@ -189,6 +219,7 @@ h1 {
         }
         h2 {
             font-size: 1em;
+            color: var(--titles-color);
         }
         p {
 
@@ -221,7 +252,7 @@ h1 {
             margin-bottom: 4vh;
         }
         span{
-            color: $grey;
+            color: var(--grey);
             font: {
                 weight: 800;
                 size: .8em;
@@ -240,7 +271,7 @@ h1 {
             .box-show {
                 position: fixed;
                 height: 45px;
-                background: white;
+                background: var(--shadown);
                 width: 80%;
                 z-index: 4;
                 transform: translateX(50px);
@@ -258,8 +289,8 @@ h1 {
                 width: 100%;
                 background: none;
                 border: none;
-                border-bottom: 3px solid $secundary-color;
-                color: $secundary-color;
+                border-bottom: 3px solid var(--secundary-color);
+                color: var(--secundary-color);
             }
         }
     }
@@ -274,8 +305,8 @@ h1 {
             background: none;
             width: fit-content;
             border: none;
-            border-bottom: 3px solid $secundary-color;
-            color: $secundary-color;
+            border-bottom: 3px solid var(--secundary-color);
+            color: var(--secundary-color);
             font: {
                 weight: 700;
                 size: 1.2em;
@@ -288,7 +319,7 @@ h1 {
               }
         }
         span {
-            color: $sub-title !important;
+            color: var(--sub-title) !important;
         }
     }
 
@@ -303,16 +334,16 @@ h1 {
     p {
         font-size: 1.8em;
         font-weight: 600;
-        color: black;
+        color: var(--titles-color);
         padding-bottom: 40px;
         border: {
-            bottom: 3px solid $primary-color;
+            bottom: 3px solid var(--primary-color);
         }
     }
 }
 .save {
     font-size: 1.5em;
-    color: $white-text;
+    color: var(--shadown);
     font-weight: 800;
     position: absolute;
     width: 100%;
@@ -347,6 +378,9 @@ h1 {
       filter: brightness(1.0);
     }
   }
+
+
+
   
 
 

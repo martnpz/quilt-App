@@ -1,3 +1,24 @@
+.menu:focus > svg:nth-child(1) {
+  -webkit-transform: translate(200px) rotate(90deg);
+          transform: translate(200px) rotate(90deg);
+  -webkit-transition: 1.6s;
+  transition: 1.6s;
+}
+
+.menu:focus > svg:nth-child(2) {
+  -webkit-transform: translateX(-100px);
+          transform: translateX(-100px);
+  -webkit-transition: 1.4s;
+  transition: 1.4s;
+}
+
+.menu:focus > svg:nth-child(3) {
+  -webkit-transform: translateX(-100px);
+          transform: translateX(-100px);
+  -webkit-transition: .8s;
+  transition: .8s;
+}
+
 .place:hover ~ .box-show {
   -webkit-transform: translateX(700px) !important;
           transform: translateX(700px) !important;
